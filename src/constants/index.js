@@ -38,15 +38,15 @@ export const PROJECTS = [
   {
     title: "HNG Timbu Cloud",
     image: project1,
-    description: "A fully functional e-commerce website with features like product listing and shopping cart.",
-    technologies: ["JavaScript", "Next.js", "Node.js", "Tailwind"],
-    link: "https://github.com/DarkVayder/hng-timbocloud-app", // Placeholder link
+    description: "A fully functional e-commerce website with features like product listing, shopping cart, summary page, ratings.",
+    technologies: ["JavaScript", "React.js", "Node.js", "Tailwind", "React-icons"],
+    link: "https://hng-timbucloud-bookstore.vercel.app/", // Placeholder link
   },
   {
     title: "Traiflex",
     image: project2,
     description: "Engineered a fully operational Traiflex trailer application leveraging advanced asynchronous operations to fetch and classify movie genres from third-party APIs, incorporating YouTube's iframe API for seamless, high-definition trailer streaming, and optimizing performance through efficient state management with Redux Thunk. Sign Up/Login to Check it out (REQUIRED)",
-    technologies: ["HTML", "CSS", "React", "Firebase", "YouTube Iframe"],
+    technologies: [ "JavaScript", "HTML", "CSS", "React", "Firebase", "YouTube Iframe", "Moivie Trailer"],
     link: "https://netflix-six-kappa.vercel.app/", // Placeholder link
   },
   {
