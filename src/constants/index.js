@@ -5,7 +5,7 @@ import project4 from "../assets/projects/project-4.png";
 
 export const HERO_CONTENT = `Experienced frontend developer with a proven track record of creating dynamic and responsive web applications that solve real-world problems. Proficient in leveraging modern frameworks and state management tools to build scalable solutions. Adept at collaborating in any environment, demonstrating strong problem-solving skills, and continuously seeking to enhance user experience. Passionate about developing innovative projects to improve everyday life.`;
 
-export const ABOUT_TEXT = `I am a dedicated and versatile frontend developer with a passion for creating efficient and user-friendly web applications. With 3 years of professional experience, I have worked with a variety of technologies, including React, Next.js, Node.js, Firebase, and MongoDB. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, and contributing to open-source projects.`;
+export const ABOUT_TEXT = `I am a dedicated and versatile frontend developer with a passion for creating efficient and user-friendly web applications. With 3+ years of professional experience, I have worked with a variety of technologies, including React, Next.js, Node.js, Firebase, and MongoDB. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, and contributing to open-source projects.`;
 
 export const EXPERIENCES = [
   {
@@ -21,10 +21,10 @@ export const EXPERIENCES = [
     technologies: ["HTML", "CSS", "Vue.js"],
   },
   {
-    year: "2023",
+    year: "2022 - 2024",
     role: "Frontend Developer",
-    description: `Developed and maintained web applications using JavaScript, React.js, and Node.js.`,
-    technologies: ["JavaScript", "Next.js"],
+    description: `Developed and maintained web applications using JavaScript, React.js, Node.js, HTML, CSS. Applications ranging from basic HTML Landing pages to improving and increasing functionality of already existing web applications`,
+    technologies: ["JavaScript", "Next.js", "React.js", "HTML", "CSS"],
   },
   {
     year: "2023",
@@ -45,16 +45,16 @@ export const PROJECTS = [
   {
     title: "Traiflex",
     image: project2,
-    description: "Engineered a fully operational Traiflex trailer application leveraging advanced asynchronous operations to fetch and classify movie genres from third-party APIs, incorporating YouTube's iframe API for seamless, high-definition trailer streaming, and optimizing performance through efficient state management with Redux Thunk.",
+    description: "Engineered a fully operational Traiflex trailer application leveraging advanced asynchronous operations to fetch and classify movie genres from third-party APIs, incorporating YouTube's iframe API for seamless, high-definition trailer streaming, and optimizing performance through efficient state management with Redux Thunk. Sign Up/Login to Check it out (REQUIRED)",
     technologies: ["HTML", "CSS", "React", "Firebase", "YouTube Iframe"],
     link: "https://netflix-six-kappa.vercel.app/", // Placeholder link
   },
   {
-    title: "Portfolio Website",
+    title: "Coffee-Shop landing page",
     image: project3,
-    description: "A personal portfolio website showcasing projects, skills, and contact information.",
-    technologies: ["JavaScript", "React.js", "Tailwind", "Framer-motion", "React-icons"],
-    link: "/", // Placeholder link
+    description: "A Basic Landing page using HTML, CSS and Basic JavaScript",
+    technologies: ["JavaScript","CSS", "HTML"],
+    link: "https://darkvayder.github.io/Coffee-Shop/#", // Placeholder link
   },
   {
     title: "Da Gist",

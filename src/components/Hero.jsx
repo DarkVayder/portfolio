@@ -1,6 +1,6 @@
 import React from 'react';
 import { HERO_CONTENT } from "../constants";
-// import profileImage from "../assets/ProfileImage.jpg";
+import profileImage from "../assets/ProfileImage.jpg";
 import { motion } from "framer-motion";
 
 const container = (delay) => ({
@@ -40,7 +40,7 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* <div className="w-full lg:w-1/2 lg:p-8 flex justify-center lg:justify-end mt-8 lg:mt-0">
+      <div className="w-full lg:w-1/2 lg:p-8 flex justify-center lg:justify-end mt-8 lg:mt-0">
         <motion.img 
         initial={{x: 100, opacity: 0}}
         animate={{x: 0, opacity: 1}}
@@ -48,7 +48,7 @@ const Hero = () => {
         src={profileImage} 
         alt="Profile" 
         className="rounded-lg shadow-lg max-w-full h-auto" />
-      </div> */}
+      </div> 
     </div>
   );
 }
