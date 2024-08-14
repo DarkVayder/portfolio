@@ -50,11 +50,11 @@ export const PROJECTS = [
     link: "https://netflix-six-kappa.vercel.app/", // Placeholder link
   },
   {
-    title: "Coffee-Shop landing page",
+    title: "Tips-Forge",
     image: project3,
-    description: "A Basic Landing page using HTML, CSS and Basic JavaScript",
-    technologies: ["JavaScript","CSS", "HTML"],
-    link: "https://darkvayder.github.io/Coffee-Shop/#", // Placeholder link
+    description: "Tips Forge is a simple React-based platform where developers can share, discover, and manage programming tips. Tips are categorized by language and can be searched or filtered easily. This app stores tips in the browser's local storage, ensuring they persist across sessions.",
+    technologies: ["JavaScript","React.js", "react-icons", "react-toastify"],
+    link: "https://tipforge.vercel.app/", // Placeholder link
   },
   {
     title: "Da Gist",
