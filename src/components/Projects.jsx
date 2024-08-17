@@ -41,10 +41,8 @@ const Projects = () => {
             >
               <a href={project.link} target="_blank" rel="noopener noreferrer">
                 <img 
-                  className='mb-6 rounded cursor-pointer' 
+                  className='mb-6 rounded cursor-pointer w-full sm:w-3/4 lg:w-[140px] h-auto sm:h-auto lg:h-[140px]' 
                   src={project.image} 
-                  width={140} 
-                  height={140} 
                   alt={project.title} 
                 />
               </a>
