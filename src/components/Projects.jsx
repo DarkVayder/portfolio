@@ -46,7 +46,7 @@ const Projects = () => {
                   alt={project.title} 
                 />
               </a>
-            </motion.div>
+            </motion.div> 
             <motion.div 
               className="w-full max-w-xl lg:w-3/4"
               initial="initial"

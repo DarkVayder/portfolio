@@ -46,15 +46,15 @@ export const PROJECTS = [
     title: "Traiflex",
     image: project2,
     description: "Engineered a fully operational Traiflex trailer application leveraging advanced asynchronous operations to fetch and classify movie genres from third-party APIs, incorporating YouTube's iframe API for seamless, high-definition trailer streaming, and optimizing performance through efficient state management with Redux Thunk. Sign Up/Login to Check it out (REQUIRED)",
-    technologies: [ "JavaScript", "HTML", "CSS", "React", "Firebase", "YouTube Iframe", "Moivie Trailer"],
+    technologies: [ "JavaScript", "HTML", "CSS", "React", "React-icons", "React-toastify", "Firebase", "YouTube Iframe", "Movie Trailer"],
     link: "https://netflix-six-kappa.vercel.app/", // Placeholder link
   },
   {
-    title: "Tips-Forge",
+    title: "E-com",
     image: project3,
-    description: "Tips Forge is a simple React-based platform where developers can share, discover, and manage programming tips. Tips are categorized by language and can be searched or filtered easily. This app stores tips in the browser's local storage, ensuring they persist across sessions.",
-    technologies: ["JavaScript","React.js", "react-icons", "react-toastify"],
-    link: "https://tipforge.vercel.app/", // Placeholder link
+    description: "An E-commerce Multi-page web application where the user can add product, edit product, and delete product. Application has Product Form, Product Listing and Product Details",
+    technologies: ["TypeScript","Tailwind Css", "Next.js", "react-toastify"],
+    link: "https://e-com-two-jade.vercel.app/", // Placeholder link
   },
   {
     title: "Da Gist",
