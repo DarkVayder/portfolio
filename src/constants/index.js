@@ -60,7 +60,7 @@ export const PROJECTS = [
     title: "Da Gist",
     image: project4,
     description: "A platform for creating and publishing blog posts.",
-    technologies: ["JavaScript", "Next.js", "Express", "MongoDB"],
+    technologies: ["JavaScript", "React.js",],
     link: "https://da-gist.vercel.app/", // Placeholder link
   },
 ];
