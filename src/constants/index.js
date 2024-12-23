@@ -3,9 +3,9 @@ import project2 from "../assets/projects/project-2.png";
 import project3 from "../assets/projects/project-3.png";
 import project4 from "../assets/projects/project-4.png";
 
-export const HERO_CONTENT = `Experienced Full-Stack developer with a proven track record of creating dynamic and responsive web applications that solve real-world problems. Proficient in leveraging modern frameworks and state management tools to build scalable solutions. Adept at collaborating in any environment, demonstrating strong problem-solving skills, and continuously seeking to enhance user experience. Passionate about developing innovative projects to improve everyday life.`;
+export const HERO_CONTENT = `Experienced Software Engineer with a proven track record of creating dynamic and responsive web applications that solve real-world problems. Proficient in leveraging modern frameworks and state management tools to build scalable solutions. Adept at collaborating in any environment, demonstrating strong problem-solving skills, and continuously seeking to enhance user experience. Passionate about developing innovative projects to improve everyday life.`;
 
-export const ABOUT_TEXT = `I am a dedicated and versatile full-stack developer with a passion for creating efficient and user-friendly web applications. With 3+ years of professional experience, I have worked with a variety of technologies, including React, Next.js, Node.js, Firebase, and MongoDB. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, and contributing to open-source projects.`;
+export const ABOUT_TEXT = `I am a dedicated and versatile Software Engineer with a passion for creating efficient and user-friendly web applications. With 3+ years of professional experience, I have worked with a variety of technologies, including React, Next.js, Node.js, Firebase, and MongoDB. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, and contributing to open-source projects.`;
 
 export const EXPERIENCES = [
   {
@@ -50,11 +50,11 @@ export const PROJECTS = [
     link: "https://netflix-six-kappa.vercel.app/", // Placeholder link
   },
   {
-    title: "E-com",
+    title: "Sales Hub",
     image: project3,
-    description: "An E-commerce Multi-page web application where the user can add product, edit product, and delete product. Application has Product Form, Product Listing and Product Details",
-    technologies: ["TypeScript","Tailwind Css", "Next.js", "react-toastify"],
-    link: "https://e-com-two-jade.vercel.app/", // Placeholder link
+    description: "This is a React-based CRM application UI which is a modern, responsive tool designed to track sales goals and manage key leads efficiently. It features dynamic progress tracking with a visually appealing progress bar, interactive profile cards with actionable insights, and a modal for detailed engagement information. The app incorporates intuitive UI components like icons, buttons, and cards, ensuring a seamless user experience. Built with Tailwind CSS for styling, it is fully mobile-responsive, making it accessible across devices. The app enhances productivity by identifying high-priority leads and centralizing activities for better workflow management.",
+    technologies: ["JavaScript","Tailwind Css", "Next.js", "react-toastify", "react-icons"],
+    link: "https://saleshub-woad.vercel.app/", // Placeholder link
   },
   {
     title: "Da Gist",
