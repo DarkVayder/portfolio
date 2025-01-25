@@ -50,11 +50,11 @@ export const PROJECTS = [
     link: "https://netflix-six-kappa.vercel.app/", // Placeholder link
   },
   {
-    title: "Sales Hub",
+    title: "4ever",
     image: project3,
-    description: "This is a React-based CRM application UI which is a modern, responsive tool designed to track sales goals and manage key leads efficiently. It features dynamic progress tracking with a visually appealing progress bar, interactive profile cards with actionable insights, and a modal for detailed engagement information. The app incorporates intuitive UI components like icons, buttons, and cards, ensuring a seamless user experience. Built with Tailwind CSS for styling, it is fully mobile-responsive, making it accessible across devices. The app enhances productivity by identifying high-priority leads and centralizing activities for better workflow management.",
-    technologies: ["JavaScript","Tailwind Css", "Next.js", "react-toastify", "react-icons"],
-    link: "https://saleshub-woad.vercel.app/", // Placeholder link
+    description: "This is a React-based e-commerce site with numerous pages. Built with Tailwind CSS for styling, it is fully mobile-responsive, making it accessible across devices.",
+    technologies: ["JavaScript","Tailwind Css", "React.js", "react-toastify", "react-router-dom"],
+    link: "https://forever-frontend-peach-nu.vercel.app/", // Placeholder link
   },
   {
     title: "Da Gist",
