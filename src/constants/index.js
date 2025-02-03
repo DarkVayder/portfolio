@@ -3,9 +3,9 @@ import project2 from "../assets/projects/project-2.png";
 import project3 from "../assets/projects/project-3.png";
 import project4 from "../assets/projects/project-4.png";
 
-export const HERO_CONTENT = `Experienced Software Developer heavy on frontend with a proven track record of creating dynamic and responsive web applications that solve real-world problems. Proficient in leveraging modern frameworks and state management tools to build scalable solutions. Adept at collaborating in any environment, demonstrating strong problem-solving skills, and continuously seeking to enhance user experience. Passionate about developing innovative projects to improve everyday life.`;
+export const HERO_CONTENT = `Creative Software Coder heavy on frontend with a proven track record of creating dynamic and responsive web applications that solve real-world problems. Proficient in leveraging modern frameworks and state management tools to build scalable solutions. Adept at collaborating in any environment, demonstrating strong problem-solving skills, and continuously seeking to enhance user experience. Passionate about developing innovative projects to improve everyday life.`;
 
-export const ABOUT_TEXT = `I am a dedicated and versatile Software Engineer with a passion for creating efficient and user-friendly web applications. With 3+ years of professional experience, I have worked with a variety of technologies, including React, Next.js, Node.js, Firebase, and MongoDB. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, and contributing to open-source projects.`;
+export const ABOUT_TEXT = `I am a dedicated and versatile Software Developer with a passion for creating efficient and user-friendly web applications. With years of professional experience, I have worked with a variety of technologies, including React, Next.js, Node.js, Express, Tailwind CSS, Material UI, Firebase, and MongoDB. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, and contributing to open-source projects.`;
 
 export const EXPERIENCES = [
   {
@@ -17,14 +17,8 @@ export const EXPERIENCES = [
   {
     year: "2024",
     role: "Frontend Developer HNG internship",
-    description: `Designed and developed user interfaces for web applications using Next.js and React. Worked closely with backend developers to integrate frontend components with Node.js APIs. Implemented responsive designs and optimized frontend performance.`,
+    description: `Designed and developed user interfaces for web applications using Next.js and React. Worked closely with UI/UX designers and backend developers to integrate frontend components with Node.js APIs. Implemented responsive designs and optimized frontend performance.`,
     technologies: ["HTML", "CSS", "Vue.js"],
-  },
-  {
-    year: "2022 - 2024",
-    role: "Frontend Developer",
-    description: `Developed and maintained web applications using JavaScript, React.js, Node.js, HTML, CSS. Applications ranging from basic HTML Landing pages to improving and increasing functionality of already existing web applications`,
-    technologies: ["JavaScript", "Next.js", "React.js", "HTML", "CSS"],
   },
   {
     year: "2023",
@@ -32,15 +26,21 @@ export const EXPERIENCES = [
     description: `Contributed to the development of a landing web application from a figma page design page using JavaScript, React.js, and React-icons.`,
     technologies: ["React.js", "JavaScript", "React-icons", "Figma"],
   },
+  {
+    year: "2022 - 2024",
+    role: "Frontend Developer",
+    description: `Developed and maintained web applications using JavaScript, React.js, Node.js, HTML, CSS. Applications ranging from basic HTML Landing pages to improving and increasing functionality of already existing web applications`,
+    technologies: ["JavaScript", "Next.js", "React.js", "HTML", "CSS"],
+  },
 ];
 
 export const PROJECTS = [
   {
-    title: "HNG Timbu Cloud",
-    image: project1,
-    description: "A fully functional e-commerce website with features like product listing, shopping cart, summary page, ratings.",
-    technologies: ["JavaScript", "React.js", "Node.js", "Tailwind", "React-icons"],
-    link: "https://hng-timbucloud-bookstore.vercel.app/", // Placeholder link
+    title: "4ever",
+    image: project3,
+    description: "This is a React-based e-commerce site with numerous pages. Built with Tailwind CSS for styling, it is fully mobile-responsive, making it accessible across devices.",
+    technologies: ["JavaScript","Tailwind Css", "React.js", "react-toastify", "react-router-dom"],
+    link: "https://forever-frontend-peach-nu.vercel.app/", // Placeholder link
   },
   {
     title: "Traiflex",
@@ -50,11 +50,11 @@ export const PROJECTS = [
     link: "https://netflix-six-kappa.vercel.app/", // Placeholder link
   },
   {
-    title: "4ever",
-    image: project3,
-    description: "This is a React-based e-commerce site with numerous pages. Built with Tailwind CSS for styling, it is fully mobile-responsive, making it accessible across devices.",
-    technologies: ["JavaScript","Tailwind Css", "React.js", "react-toastify", "react-router-dom"],
-    link: "https://forever-frontend-peach-nu.vercel.app/", // Placeholder link
+    title: "HNG Timbu Cloud",
+    image: project1,
+    description: "A fully functional e-commerce website with features like product listing, shopping cart, summary page, ratings.",
+    technologies: ["JavaScript", "React.js", "Node.js", "Tailwind", "React-icons"],
+    link: "https://hng-timbucloud-bookstore.vercel.app/", // Placeholder link
   },
   {
     title: "Da Gist",
