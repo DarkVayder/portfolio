@@ -9,10 +9,10 @@ export const ABOUT_TEXT = `I am a dedicated and versatile Software Developer wit
 
 export const EXPERIENCES = [
   {
-    year: "2024",
-    role: "Full Stack Developer",
-    description: `Developed and maintained Traiflex web application using JavaScript, React.js, and Node.js. Implemented RESTful APIs and integrated with Firebase databases.`,
-    technologies: ["JavaScript", "React.js", "Firebase", "TMDB API", "React-icons"],
+    year: "2023 - 2025",
+    role: "Freelance",
+    description: `Built responsive React.js and Next.js applications with reusable components and Translated Figma designs into pixel-perfect UI and Integrated REST APIs, boosting efficiency by 40%.`,
+    technologies: ["JavaScript", "React.js", "Firebase", "API", "Tailwind", "Next.js", "Shadcn", "MongoDB"],
   },
   {
     year: "2024",
@@ -50,18 +50,18 @@ export const PROJECTS = [
     link: "https://netflix-six-kappa.vercel.app/", // Placeholder link
   },
   {
+    "title": "Allustrate",
+    "image": project4,
+    "description": "Allustrate is a cutting-edge AI-powered image generation platform that transforms textual descriptions into visually stunning, high-fidelity digital artwork. Built with React, Next.js, and Tailwind CSS, the application utilizes advanced AI models to interpret user prompts and generate hyper-realistic, creative, and stylistically diverse images. With an intuitive and responsive UI, Allustrate offers real-time image rendering, an intelligent tagging system for exploring artistic styles, and seamless user interactions powered by dynamic animations and smooth state management. It integrates Axios for efficient API communication, Sonner for real-time notifications, and a robust state-driven architecture to ensure a frictionless user experience. Users can effortlessly generate AI-driven visuals, preview high-resolution outputs, and download their creations with a single click. By merging modern web development principles with cutting-edge AI capabilities, Allustrate redefines the way users conceptualize and create digital imagery.",
+    "technologies": ["JavaScript", "Rapid API", "Next.js", "Tailwind CSS"],
+    "link": "https://allustrate.vercel.app/", // Placeholder link
+  },
+  {
     title: "HNG Timbu Cloud",
     image: project1,
     description: "A fully functional e-commerce website with features like product listing, shopping cart, summary page, ratings.",
     technologies: ["JavaScript", "React.js", "Node.js", "Tailwind", "React-icons"],
     link: "https://hng-timbucloud-bookstore.vercel.app/", // Placeholder link
-  },
-  {
-    title: "Da Gist",
-    image: project4,
-    description: "A platform for creating and publishing blog posts.",
-    technologies: ["JavaScript", "React.js",],
-    link: "https://da-gist.vercel.app/", // Placeholder link
   },
 ];
 
