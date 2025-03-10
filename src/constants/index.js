@@ -5,11 +5,11 @@ import project4 from "../assets/projects/project-4.png";
 
 export const HERO_CONTENT = `Creative Software Coder heavy on frontend with a proven track record of creating dynamic and responsive web applications that solve real-world problems. Proficient in leveraging modern frameworks and state management tools to build scalable solutions. Adept at collaborating in any environment, demonstrating strong problem-solving skills, and continuously seeking to enhance user experience. Passionate about developing innovative projects to improve everyday life.`;
 
-export const ABOUT_TEXT = `I am a dedicated and versatile Software Developer with a passion for creating efficient and user-friendly web applications. With years of professional experience, I have worked with a variety of technologies, including React, Next.js, Node.js, Express, Tailwind CSS, Material UI, Firebase, and MongoDB. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, and contributing to open-source projects.`;
+export const ABOUT_TEXT = `I’m a curious and adaptable Software Developer who thrives on building sleek, user-friendly web applications. My journey started with a fascination for how things work, and that curiosity has driven me to master technologies like React, Next.js, Node.js, Express, Tailwind CSS, Material UI, Firebase, and MongoDB. I love tackling complex problems, refining performance, and collaborating with others to bring ideas to life. Beyond coding, I stay active, explore emerging tech, and contribute to open-source projects particularly on Onlydust—always looking for the next challenge to push my skills further.`;
 
 export const EXPERIENCES = [
   {
-    year: "2023 - 2025",
+    year: "2023 - Present",
     role: "Freelance",
     description: `Built responsive React.js and Next.js applications with reusable components and Translated Figma designs into pixel-perfect UI and Integrated REST APIs, boosting efficiency by 40%.`,
     technologies: ["JavaScript", "React.js", "Firebase", "API", "Tailwind", "Next.js", "Shadcn", "MongoDB"],
@@ -22,12 +22,12 @@ export const EXPERIENCES = [
   },
   {
     year: "2023",
-    role: "Frontend Engineer Paritie-Hub Intern",
+    role: "Frontend Developer Intern Paritie-Hub",
     description: `Contributed to the development of a landing web application from a figma page design page using JavaScript, React.js, and React-icons.`,
     technologies: ["React.js", "JavaScript", "React-icons", "Figma"],
   },
   {
-    year: "2022 - 2024",
+    year: "2022",
     role: "Frontend Developer",
     description: `Developed and maintained web applications using JavaScript, React.js, Node.js, HTML, CSS. Applications ranging from basic HTML Landing pages to improving and increasing functionality of already existing web applications`,
     technologies: ["JavaScript", "Next.js", "React.js", "HTML", "CSS"],
@@ -52,14 +52,14 @@ export const PROJECTS = [
   {
     "title": "Allustrate",
     "image": project4,
-    "description": "Allustrate is a cutting-edge AI-powered image generation platform that transforms textual descriptions into visually stunning, high-fidelity digital artwork. Built with React, Next.js, and Tailwind CSS, the application utilizes advanced AI models to interpret user prompts and generate hyper-realistic, creative, and stylistically diverse images. With an intuitive and responsive UI, Allustrate offers real-time image rendering, an intelligent tagging system for exploring artistic styles, and seamless user interactions powered by dynamic animations and smooth state management. It integrates Axios for efficient API communication, Sonner for real-time notifications, and a robust state-driven architecture to ensure a frictionless user experience. Users can effortlessly generate AI-driven visuals, preview high-resolution outputs, and download their creations with a single click. By merging modern web development principles with cutting-edge AI capabilities, Allustrate redefines the way users conceptualize and create digital imagery.",
+    "description": "Allustrate is an AI-powered image generation platform that converts text into high-fidelity digital art. Built with React, Next.js, and Tailwind CSS, it features real-time rendering, dynamic animations, and an intuitive UI. It integrates Axios for API communication, Sonner for notifications, and a robust state-driven architecture for seamless interactions. Users can generate, preview, and download AI-crafted visuals with ease, redefining digital creativity.",
     "technologies": ["JavaScript", "Rapid API", "Next.js", "Tailwind CSS"],
     "link": "https://allustrate.vercel.app/", // Placeholder link
   },
   {
     title: "HNG Timbu Cloud",
     image: project1,
-    description: "A fully functional e-commerce website with features like product listing, shopping cart, summary page, ratings.",
+    description: "A fully functional bookstore website with features like product listing, shopping cart, summary page, ratings.",
     technologies: ["JavaScript", "React.js", "Node.js", "Tailwind", "React-icons"],
     link: "https://hng-timbucloud-bookstore.vercel.app/", // Placeholder link
   },
