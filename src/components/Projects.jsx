@@ -7,9 +7,7 @@ const imageVariants = {
   animate: { 
     opacity: 1, 
     scale: 1,
-    transition: {
-      duration: 0.5
-    }
+    transition: { duration: 0.5 }
   }
 };
 
@@ -18,10 +16,7 @@ const textVariants = {
   animate: { 
     opacity: 1, 
     x: 0,
-    transition: {
-      duration: 0.5,
-      delay: 0.2
-    }
+    transition: { duration: 0.5, delay: 0.2 }
   }
 };
 
@@ -33,18 +28,24 @@ const Projects = () => {
         {PROJECTS.map((project, index) => (
           <div key={index} className='mb-8 flex flex-wrap lg:justify-center'> 
             <motion.div 
-              className="w-full lg:w-1/4"
+              className="w-full lg:w-1/4 relative group"
               initial="initial"
               whileInView="animate"
               viewport={{ once: true }}
               variants={imageVariants}
             >
-              <a href={project.link} target="_blank" rel="noopener noreferrer">
+              <a href={project.link} target="_blank" rel="noopener noreferrer" className="relative block">
                 <img 
-                  className='mb-6 rounded cursor-pointer w-full sm:w-3/4 lg:w-[140px] h-auto sm:h-auto lg:h-[140px]' 
+                  className='mb-6 rounded cursor-pointer w-full sm:w-3/4 lg:w-[140px] h-auto sm:h-auto lg:h-[140px] transition-transform duration-300 transform group-hover:scale-105' 
                   src={project.image} 
                   alt={project.title} 
                 />
+                {/* Overlay */}
+                <motion.div 
+                  className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded"
+                >
+                  <span className="text-white text-sm font-semibold">View Live Demo</span>
+                </motion.div>
               </a>
             </motion.div> 
             <motion.div 
