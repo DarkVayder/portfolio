@@ -1,77 +1,57 @@
-import React from 'react';
+import React from "react";
 import { PROJECTS } from "../constants";
 import { motion } from "framer-motion";
 
-const imageVariants = {
-  initial: { opacity: 0, scale: 0.8 },
-  animate: { 
-    opacity: 1, 
-    scale: 1,
-    transition: { duration: 0.5 }
-  }
-};
-
-const textVariants = {
-  initial: { opacity: 0, x: -30 },
-  animate: { 
-    opacity: 1, 
-    x: 0,
-    transition: { duration: 0.5, delay: 0.2 }
-  }
+const fadeIn = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 };
 
 const Projects = () => {
   return (
-    <div className='border-b border-neutral-900 pb-4'>
-      <h1 className="my-20 text-center text-4xl">Some of my Projects</h1>
-      <div>
+    <section className="py-16 text-white">
+      <h1 className="text-center text-4xl font-bold mb-12">My Projects</h1>
+      <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {PROJECTS.map((project, index) => (
-          <div key={index} className='mb-8 flex flex-wrap lg:justify-center'> 
-            <motion.div 
-              className="w-full lg:w-1/4 relative group"
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: true }}
-              variants={imageVariants}
-            >
-              <a href={project.link} target="_blank" rel="noopener noreferrer" className="relative block">
-                <img 
-                  className='mb-6 rounded cursor-pointer w-full sm:w-3/4 lg:w-[140px] h-auto sm:h-auto lg:h-[140px] transition-transform duration-300 transform group-hover:scale-105' 
-                  src={project.image} 
-                  alt={project.title} 
+          <motion.div
+            key={index}
+            className="bg-neutral-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeIn}
+          >
+            <div className="relative overflow-hidden rounded-lg group">
+              <a href={project.link} target="_blank" rel="noopener noreferrer">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-48 object-cover rounded-lg transition-transform duration-300 transform group-hover:scale-105"
                 />
-                {/* Overlay */}
-                <motion.div 
-                  className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded"
-                >
-                  <span className="text-white text-sm font-semibold">View Live Demo</span>
-                </motion.div>
+                <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="text-white font-semibold text-sm">View Live Demo</span>
+                </div>
               </a>
-            </motion.div> 
-            <motion.div 
-              className="w-full max-w-xl lg:w-3/4"
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: true }}
-              variants={textVariants}
-            >
-              <h6 className="mb-2 font-semibold">{project.title}</h6>
-              <p className='mb-4 text-neutral-400'>{project.description}</p>
-              <div>
+            </div>
+            <div className="mt-5">
+              <h3 className="text-xl font-semibold">{project.title}</h3>
+              <p className="text-neutral-400 mt-2">{project.description}</p>
+              <div className="mt-4 flex flex-wrap gap-2">
                 {project.technologies.map((tech, index) => (
-                  <span 
-                    key={index} 
-                    className='mr-2 mt-4 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-blue-800'>
+                  <span
+                    key={index}
+                    className="bg-blue-900 text-blue-300 px-3 py-1 rounded-full text-xs font-medium"
+                  >
                     {tech}
                   </span>
                 ))}
               </div>
-            </motion.div>
-          </div>
+            </div>
+          </motion.div>
         ))}
       </div>
-    </div>
+    </section>
   );
-}
+};
 
 export default Projects;
