@@ -2,6 +2,7 @@ import project1 from "../assets/projects/project-1.png";
 import project2 from "../assets/projects/project-2.png";
 import project3 from "../assets/projects/project-3.png";
 import project4 from "../assets/projects/project-4.png";
+import project5 from "../assets/projects/project-5.png";
 
 export const HERO_CONTENT = `Creative Software Coder heavy on frontend with a proven track record of creating dynamic and responsive web applications that solve real-world problems. Proficient in leveraging modern frameworks and state management tools to build scalable solutions. Adept at collaborating in any environment, demonstrating strong problem-solving skills, and continuously seeking to enhance user experience. Passionate about developing innovative projects to improve everyday life.`;
 
@@ -62,6 +63,13 @@ export const PROJECTS = [
     description: "A fully functional bookstore website with features like product listing, shopping cart, summary page, ratings.",
     technologies: ["JavaScript", "React.js", "Node.js", "Tailwind", "React-icons"],
     link: "https://hng-timbucloud-bookstore.vercel.app/", // Placeholder link
+  },
+  {
+    title: "Exchaero",
+    image: project5,
+    description: "A responsive currency exchange web app that provides real-time exchange rates, currency conversion, and historical data visualization using interactive bar charts. Built with React, Tailwind CSS, and Recharts, it features API integration, optimized performance, and a user-friendly interface for seamless navigation across multiple devices.",
+    technologies: ["JavaScript", "React.js", "Node.js", "Tailwind", "Axios", "React-icons"],
+    link: "https://exchaero.vercel.app/", // Placeholder link
   },
 ];
 
