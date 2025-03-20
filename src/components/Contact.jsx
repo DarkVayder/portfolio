@@ -7,10 +7,7 @@ const textVariants = {
   animate: { 
     opacity: 1, 
     y: 0,
-    transition: {
-      duration: 0.5,
-      ease: "easeInOut"
-    }
+    transition: { duration: 0.5, ease: "easeInOut" }
   }
 };
 
@@ -26,34 +23,38 @@ const Contact = () => {
       >
         Get in Touch
       </motion.h1>
+
       <div className="text-center tracking-tighter">
-        <motion.p 
-          className="my-4"
+        <motion.address 
+          className="not-italic my-4 text-neutral-300"
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
           variants={textVariants}
         >
-          {CONTACT.address}
-        </motion.p>
+          {CONTACT?.address || "Address not available"}
+        </motion.address>
+
         <motion.p 
-          className="my-4"
+          role="phone"
+          className="my-4 text-neutral-300"
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
           variants={textVariants}
         >
-          {CONTACT.phoneNo}
+          {CONTACT?.phoneNo || "Phone number not available"}
         </motion.p>
+
         <motion.a 
-          href={`mailto:${CONTACT.email}`} 
-          className="border-b"
+          href={`mailto:${CONTACT?.email || "mrabiu321@gmail.com"}`} 
+          className="border-b text-blue-400 hover:text-blue-600 transition-colors"
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
           variants={textVariants}
         >
-          {CONTACT.email}
+          {CONTACT?.email || "mrabiu321@gmail.com"}
         </motion.a>
       </div>
     </div>
