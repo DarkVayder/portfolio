@@ -1,135 +1,60 @@
-import React from 'react'
-import { RiReactjsLine } from 'react-icons/ri';
-import { RiNextjsLine } from "react-icons/ri";
-import { IoLogoFirebase } from "react-icons/io5";
-import { SiTypescript } from "react-icons/si";
-import { SiMongodb } from "react-icons/si";
-import { FaNodeJs } from "react-icons/fa";
-import { SiExpress } from "react-icons/si";
-import { FaVuejs } from "react-icons/fa";
-import { RiTailwindCssFill } from "react-icons/ri";
-import { FaGithub } from "react-icons/fa";
-import { FaHtml5 } from "react-icons/fa";
-import { FaCss3 } from "react-icons/fa";
-import { motion } from "framer-motion";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { 
+  RiReactjsLine, RiNextjsLine, RiTailwindCssFill 
+} from 'react-icons/ri';
+import { 
+  IoLogoFirebase 
+} from 'react-icons/io5';
+import { 
+  SiTypescript, SiMongodb, SiExpress 
+} from 'react-icons/si';
+import { 
+  FaNodeJs, FaVuejs, FaGithub, FaHtml5, FaCss3 
+} from 'react-icons/fa';
+
+const techStack = [
+  { icon: RiReactjsLine, color: 'text-cyan-400', delay: 2 },
+  { icon: RiNextjsLine, color: '', delay: 2.2 },
+  { icon: IoLogoFirebase, color: 'text-yellow-400', delay: 2.4 },
+  { icon: SiTypescript, color: 'text-blue-900', delay: 2.6 },
+  { icon: SiMongodb, color: 'text-green-400', delay: 2.8 },
+  { icon: FaNodeJs, color: 'text-green-600', delay: 3 },
+  { icon: SiExpress, color: 'text-cyan-400', delay: 3.2 },
+  { icon: FaVuejs, color: 'text-pink-200', delay: 3.4 },
+  { icon: RiTailwindCssFill, color: 'text-cyan-400', delay: 3.6 },
+  { icon: FaHtml5, color: 'text-red-700', delay: 3.8 },
+  { icon: FaCss3, color: 'text-teal-800', delay: 4 },
+  { icon: FaGithub, color: 'text-white', delay: 4.2 },
+];
 
 const iconVariants = (duration) => ({
   initial: { y: -10 },
   animate: {
     y: [10, -10],
-    transition: {
-      duration: duration,
-      ease: "linear",
-      repeat: Infinity,
-      repeatType: "reverse"
-    }
+    transition: { duration, ease: 'linear', repeat: Infinity, repeatType: 'reverse' },
   }
 });
 
 const Techs = () => {
   return (
     <div className='border-b border-neutral-800 pb-24'>
-      <h1 className='my-20 text-center text-4xl'>My Tech's</h1>
+      <h1 className='my-20 text-center text-4xl font-semibold'>My Tech Stack</h1>
       <div className='flex flex-wrap items-center justify-center gap-4'>
-        <motion.div
-          variants={iconVariants(2)}
-          initial="initial"
-          animate="animate"
-          className='rounded-2xl border-4 border-neutral-800 p-4'
-        >
-          <RiReactjsLine className='text-7xl text-cyan-400' />
-        </motion.div>
-        <motion.div
-          variants={iconVariants(2.2)}
-          initial="initial"
-          animate="animate"
-          className='rounded-2xl border-4 border-neutral-800 p-4'
-        >
-          <RiNextjsLine className='text-7xl' />
-        </motion.div>
-        <motion.div
-          variants={iconVariants(2.4)}
-          initial="initial"
-          animate="animate"
-          className='rounded-2xl border-4 border-neutral-800 p-4'
-        >
-          <IoLogoFirebase className='text-7xl text-yellow-400' />
-        </motion.div>
-        <motion.div
-          variants={iconVariants(2.6)}
-          initial="initial"
-          animate="animate"
-          className='rounded-2xl border-4 border-neutral-800 p-4'
-        >
-          <SiTypescript className='text-7xl text-blue-900' />
-        </motion.div>
-        <motion.div
-          variants={iconVariants(2.8)}
-          initial="initial"
-          animate="animate"
-          className='rounded-2xl border-4 border-neutral-800 p-4'
-        >
-          <SiMongodb className='text-7xl text-green-400' />
-        </motion.div>
-        <motion.div
-          variants={iconVariants(3)}
-          initial="initial"
-          animate="animate"
-          className='rounded-2xl border-4 border-neutral-800 p-4'
-        >
-          <FaNodeJs className='text-7xl text-green-600' />
-        </motion.div>
-        <motion.div
-          variants={iconVariants(3.2)}
-          initial="initial"
-          animate="animate"
-          className='rounded-2xl border-4 border-neutral-800 p-4'
-        >
-          <SiExpress className='text-7xl text-cyan-400' />
-        </motion.div>
-        <motion.div
-          variants={iconVariants(3.4)}
-          initial="initial"
-          animate="animate"
-          className='rounded-2xl border-4 border-neutral-800 p-4'
-        >
-          <FaVuejs className='text-7xl text-pink-200' />
-        </motion.div>
-        <motion.div
-          variants={iconVariants(3.6)}
-          initial="initial"
-          animate="animate"
-          className='rounded-2xl border-4 border-neutral-800 p-4'
-        >
-          <RiTailwindCssFill className='text-7xl text-cyan-400' />
-        </motion.div>
-        <motion.div
-          variants={iconVariants(3.8)}
-          initial="initial"
-          animate="animate"
-          className='rounded-2xl border-4 border-neutral-800 p-4'
-        >
-          <FaHtml5 className='text-7xl text-red-700' />
-        </motion.div>
-        <motion.div
-          variants={iconVariants(4)}
-          initial="initial"
-          animate="animate"
-          className='rounded-2xl border-4 border-neutral-800 p-4'
-        >
-          <FaCss3 className='text-7xl text-teal-800' />
-        </motion.div>
-        <motion.div
-          variants={iconVariants(4.2)}
-          initial="initial"
-          animate="animate"
-          className='rounded-2xl border-4 border-neutral-800 p-4'
-        >
-          <FaGithub className='text-7xl text-white' />
-        </motion.div>
+        {techStack.map(({ icon: Icon, color, delay }, index) => (
+          <motion.div
+            key={index}
+            variants={iconVariants(delay)}
+            initial="initial"
+            animate="animate"
+            className='rounded-2xl border-4 border-neutral-800 p-4 transition-transform hover:scale-110'
+          >
+            <Icon className={`text-7xl ${color}`} />
+          </motion.div>
+        ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Techs;
