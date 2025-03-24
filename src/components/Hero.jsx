@@ -42,6 +42,18 @@ const Hero = () => {
           >
             {HERO_CONTENT}
           </motion.p>
+
+          {/* Download CV Button */}
+          <motion.a
+            variants={fadeIn(0.9)}
+            initial="hidden"
+            animate="visible"
+            href="../assets/Rabiu_Muhammad_CV.pdf"
+            download="Rabiu_Muhammad_CV.pdf"
+            className="mt-4 inline-block bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 hover:bg-pink-900 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition duration-300"
+          >
+            Download CV
+          </motion.a>
         </div>
       </div>
 
