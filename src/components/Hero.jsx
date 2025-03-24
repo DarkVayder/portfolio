@@ -12,6 +12,19 @@ const fadeIn = (delay) => ({
   },
 });
 
+// Google Drive File ID (Your actual file ID)
+const googleDriveFileID = "1Am02FH6dkeREzPlrSBQ-RKmvvIAMijVs";
+
+// Function to view CV in a new tab
+const handleViewCV = () => {
+  window.open(`https://drive.google.com/file/d/${googleDriveFileID}/view`, "_blank");
+};
+
+// Function to download CV directly
+const handleDownloadCV = () => {
+  window.location.href = `https://drive.google.com/uc?export=download&id=${googleDriveFileID}`;
+};
+
 const Hero = () => {
   return (
     <div className="border-b border-neutral-900 pb-10 lg:flex lg:items-center lg:justify-between">
@@ -43,17 +56,30 @@ const Hero = () => {
             {HERO_CONTENT}
           </motion.p>
 
-          {/* Download CV Button */}
-          <motion.a
-            variants={fadeIn(0.9)}
-            initial="hidden"
-            animate="visible"
-            href="../assets/Rabiu_Muhammad_CV.pdf"
-            download="Rabiu_Muhammad_CV.pdf"
-            className="mt-4 inline-block bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 hover:bg-pink-900 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition duration-300"
-          >
-            Download CV
-          </motion.a>
+          {/* CV Buttons */}
+          <div className="mt-4 flex space-x-4">
+            {/* View CV Button */}
+            <motion.button
+              variants={fadeIn(0.9)}
+              initial="hidden"
+              animate="visible"
+              onClick={handleViewCV}
+              className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 hover:bg-pink-900 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition duration-300"
+            >
+              View CV
+            </motion.button>
+
+            {/* Download CV Button */}
+            <motion.button
+              variants={fadeIn(1.2)}
+              initial="hidden"
+              animate="visible"
+              onClick={handleDownloadCV}
+              className="bg-neutral-800 hover:bg-neutral-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition duration-300"
+            >
+              Download CV
+            </motion.button>
+          </div>
         </div>
       </div>
 
