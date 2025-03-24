@@ -1,10 +1,25 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { FaLinkedin, FaGithub, FaWhatsapp } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 const Navbar = () => {
+  const [isScrolling, setIsScrolling] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolling(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav className="flex items-center justify-between py-6 px-8 text-white shadow-md">
+    <nav
+      className={`fixed mb-20 top-0 left-0 w-full flex items-center justify-between py-6 px-8 shadow-md transition-all duration-300 ${
+        isScrolling ? "bg-neutral-900 bg-opacity-80 backdrop-blur-md" : ""
+      }`}
+    >
       {/* Branding */}
       <div className="flex items-center">
         <h1 className="text-3xl font-bold cursor-pointer bg-gradient-to-r from-blue-400 to-purple-600 text-transparent bg-clip-text">
