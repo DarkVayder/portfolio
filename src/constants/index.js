@@ -23,13 +23,13 @@ export const EXPERIENCES = [
   },
   {
     year: "2024",
-    role: "Frontend Developer - (intern) HNG",
+    role: "Frontend Developer - HNG (intern)",
     description: `Designed and developed user interfaces for web applications using Next.js and React. Worked closely with UI/UX designers and backend developers to integrate frontend components with Node.js APIs. Implemented responsive designs and optimized frontend performance.`,
     technologies: ["HTML", "CSS", "React.js"],
   },
   {
     year: "2023",
-    role: "Frontend Developer (Intern) - Paritie-Hub",
+    role: "Frontend Developer - Paritie-Hub (intern)",
     description: `Contributed to the development of a landing web application from a figma page design page using JavaScript, React.js, and React-icons.`,
     technologies: ["React.js", "JavaScript", "React-icons", "Figma"],
   },
