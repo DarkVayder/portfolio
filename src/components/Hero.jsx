@@ -45,7 +45,7 @@ const Hero = () => {
             animate="visible"
             className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-4xl text-transparent tracking-tight"
           >
-            Software Developer
+            Software Engineer
           </motion.span>
           <motion.p
             variants={fadeIn(0.6)}

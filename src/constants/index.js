@@ -15,11 +15,17 @@ export const EXPERIENCES = [
     description: `Built responsive React.js and Next.js applications with reusable components and Translated Figma designs into pixel-perfect UI and Integrated REST APIs, boosting efficiency by 40%.`,
     technologies: ["JavaScript", "React.js", "Firebase", "API", "Tailwind", "Next.js", "Shadcn", "MongoDB"],
   },
+    {
+    year: "2025 - Present",
+    role: "Web Developer - Isaac Consolidates",
+    description: `Developed and maintained web applications using JavaScript, React.js, Node.js, HTML, CSS. Applications ranging from basic HTML Landing pages to improving and increasing functionality of already existing web applications`,
+    technologies: ["JavaScript", "Next.js", "React.js", "Node", "CSS"],
+  },
   {
     year: "2025 - Present",
     role: "Software Engineer - SparkStrand",
     description: `Designed and developed user interfaces for web applications using Next.js and React. Worked closely with UI/UX designers and backend developers to integrate frontend components with Node.js APIs. Implemented responsive designs and optimized frontend performance.`,
-    technologies: ["Medusa", "Tailwind", "Next.js"],
+    technologies: ["Medusa", "Tailwind", "Next.js", "React"],
   },
   {
     year: "2024",
@@ -32,12 +38,6 @@ export const EXPERIENCES = [
     role: "Frontend Developer - Paritie-Hub (intern)",
     description: `Contributed to the development of a landing web application from a figma page design page using JavaScript, React.js, and React-icons.`,
     technologies: ["React.js", "JavaScript", "React-icons", "Figma"],
-  },
-  {
-    year: "2022",
-    role: "Frontend Developer",
-    description: `Developed and maintained web applications using JavaScript, React.js, Node.js, HTML, CSS. Applications ranging from basic HTML Landing pages to improving and increasing functionality of already existing web applications`,
-    technologies: ["JavaScript", "Next.js", "React.js", "HTML", "CSS"],
   },
 ];
 
