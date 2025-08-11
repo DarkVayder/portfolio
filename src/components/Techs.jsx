@@ -39,7 +39,7 @@ const iconVariants = (duration) => ({
 const Techs = () => {
   return (
     <div className='border-b border-neutral-800 pb-24'>
-      <h1 className='my-20 text-center text-4xl font-semibold'>My Tech Stack</h1>
+      <h1 className='my-20 text-center text-4xl font-semibold'>Tech Stack's</h1>
       <div className='flex flex-wrap items-center justify-center gap-4'>
         {techStack.map(({ icon: Icon, color, delay }, index) => (
           <motion.div
