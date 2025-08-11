@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   RiReactjsLine, RiNextjsLine, RiTailwindCssFill 
@@ -7,7 +6,7 @@ import {
   IoLogoFirebase 
 } from 'react-icons/io5';
 import { 
-  SiTypescript, SiMongodb, SiExpress 
+  SiTypescript, SiMongodb, SiExpress, SiMedusa 
 } from 'react-icons/si';
 import { 
   FaNodeJs, FaVuejs, FaGithub, FaHtml5, FaCss3 
@@ -26,6 +25,7 @@ const techStack = [
   { icon: FaHtml5, color: 'text-red-700', delay: 3.8 },
   { icon: FaCss3, color: 'text-teal-800', delay: 4 },
   { icon: FaGithub, color: 'text-white', delay: 4.2 },
+  { icon: SiMedusa, color: 'text-gray-700', delay: 4.4 },
 ];
 
 const iconVariants = (duration) => ({
