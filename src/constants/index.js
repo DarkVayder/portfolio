@@ -34,7 +34,7 @@ export const EXPERIENCES = [
     technologies: ["HTML", "CSS", "React.js", "Node", "Express", "Tailwind"],
   },
   {
-    year: "2023",
+    year: "2024",
     role: "Frontend Developer - HNG (intern)",
     description: `Contributed to the development of a landing web application from a figma page design page using JavaScript, React.js, and React-icons.`,
     technologies: ["React.js", "JavaScript", "React-icons", "Figma"],
