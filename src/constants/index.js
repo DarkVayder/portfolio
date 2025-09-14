@@ -19,19 +19,19 @@ export const EXPERIENCES = [
     year: "2025",
     role: "Web Developer - Isaac Consolidates",
     description: `Developed and maintained web applications using JavaScript, React.js, Node.js, HTML, CSS. Applications ranging from basic HTML Landing pages to improving and increasing functionality of already existing web applications`,
-    technologies: ["JavaScript", "Next.js", "React.js", "Node", "CSS"],
+    technologies: ["JavaScript", "Next.js", "React.js", "Node", "CSS", "Python"],
   },
   {
     year: "2025",
     role: "Software Engineer - SparkStrand",
     description: `Designed and developed user interfaces for web applications using Next.js and React. Worked closely with UI/UX designers and backend developers to integrate frontend components with Node.js APIs. Implemented responsive designs and optimized frontend performance.`,
-    technologies: ["Medusa", "Tailwind", "Next.js", "React"],
+    technologies: ["Medusa", "Tailwind", "Next.js", "React-Native"],
   },
   {
     year: "2025",
     role: "Software Developer - Camie",
     description: `Designed and developed user interfaces for web applications using Next.js and React. Worked closely with UI/UX designers and backend developers to integrate frontend components with Node.js APIs. Implemented responsive designs and optimized frontend performance.`,
-    technologies: ["HTML", "CSS", "React.js", "Node", "Express", "Tailwind"],
+    technologies: ["Next.js", "Node", "Express", "Tailwind"],
   },
   {
     year: "2024",
