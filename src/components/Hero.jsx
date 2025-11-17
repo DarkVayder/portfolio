@@ -11,12 +11,12 @@ const fadeIn = (delay) => ({
   },
 });
 
-// Google Drive File ID (Your actual file ID)
-const googleDriveFileID = "1Am02FH6dkeREzPlrSBQ-RKmvvIAMijVs";
+// Google Drive File ID (Your actual file ID)\
+const googleDriveFileID = "17eEGt8ronEsGsmgLSmiwIGH1S9kt3OMs";
 
 // Function to view CV in a new tab
 const handleViewCV = () => {
-  window.open(`https://drive.google.com/file/d/${googleDriveFileID}/view`, "_blank");
+  window.open(`https://drive.google.com/file/d/${googleDriveFileID}/view`, "_blank"); 
 };
 
 // Function to download CV directly
