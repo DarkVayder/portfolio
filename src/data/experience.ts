@@ -14,18 +14,39 @@ export const EXPERIENCES: Experience[] = [
     technologies: ["React", "Next.js", "NestJS", "Node.js", "TypeScript", "Tailwind CSS", "Firebase", "MongoDB"],
   },
   {
-    year: "2025",
-    role: "Web Developer — Isaac Consolidates",
+    year: "2026",
+    role: "Software Engineer — Finclusion",
     description:
       "Built and maintained web applications ranging from landing pages to feature upgrades on existing production systems.",
-    technologies: ["JavaScript", "Next.js", "React.js", "Node.js", "Python"],
+    technologies: ["TypeScript", "Next.js", "React.js", "Node.js", "Nestjs"],
+  },
+  {
+    year: "2026",
+    role: "Frontend Developer — Mindgrid Technologies",
+    description:
+      "Built and maintained web applications ranging from landing pages to feature upgrades on existing production systems.",
+    technologies: ["TypeScript", "Next.js", "React.js", "Node.js"],
+  },
+    {
+    year: "2025",
+    role: "Software Developer — Camie",
+    description:
+      "Built and maintained web applications ranging from landing pages to feature upgrades on existing production systems.",
+    technologies: ["JavaScript", "Next.js", "React.js", "Node.js", "TypeScript"],
   },
   {
     year: "2025",
     role: "Software Engineer — SparkStrand",
     description:
       "Shipped two production products: TaxDone, a multi-language (EN/DE/FR) tax-filing platform, and VentureDirection, a multi-tenant business platform with shared UI components across web, React Native, and desktop. Partnered directly with design and backend to ship features end to end.",
-    technologies: ["Next.js", "React", "React Native", "NativeWind", "Tailwind CSS", "Medusa"],
+    technologies: ["Next.js", "React", "React Native", "Nestjs", "Tailwind CSS", "Medusa", "Docker", "Postgress"],
+  },
+  {
+    year: "2025",
+    role: "Web Developer — Isaac Consolidates",
+    description:
+      "Built and maintained web applications ranging from landing pages to feature upgrades on existing production systems.",
+    technologies: ["JavaScript", "Next.js", "React.js", "Node.js", "Python"],
   },
   {
     year: "2024",

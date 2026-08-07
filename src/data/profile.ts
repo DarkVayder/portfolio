@@ -1,7 +1,7 @@
 export const PROFILE = {
   name: "Rabiu Muhammad",
   role: "Software Engineer",
-  roleDetail: "Frontend-leaning full-stack",
+  roleDetail: "Full-stack",
   location: "Abuja, Nigeria",
   tagline:
     "I build production web platforms — the kind real businesses run on. Tax filing, escrow-backed project management, real estate marketplaces, e-commerce.",
