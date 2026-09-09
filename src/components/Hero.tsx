@@ -1,39 +1,66 @@
 import { motion } from "framer-motion";
+import profileImage from "../assets/ProfileImage.jpg";
 import { PROFILE } from "../data/profile";
 import { fadeUp } from "../lib/motion";
+import LiveClock from "./LiveClock";
 
-const handleViewCV = () =>
-  window.open(`https://drive.google.com/file/d/${PROFILE.cv.driveFileId}/view`, "_blank");
+const handleViewCV = () => window.open(PROFILE.cv.path, "_blank", "noopener,noreferrer");
 
 const handleDownloadCV = () => {
-  window.location.href = `https://drive.google.com/uc?export=download&id=${PROFILE.cv.driveFileId}`;
+  const link = document.createElement("a");
+  link.href = PROFILE.cv.path;
+  link.download = PROFILE.cv.filename;
+  link.click();
 };
 
 const Hero = () => {
   return (
-    <section id="top" className="border-b border-line pb-20 pt-40 lg:pt-48">
-      <motion.p
+    <section id="top" className="pb-16 pt-32 lg:pt-40">
+      <motion.div
         custom={0}
         initial="hidden"
         animate="visible"
         variants={fadeUp}
-        className="font-mono text-sm text-signal"
+        className="flex flex-wrap items-center gap-4"
       >
-        {PROFILE.role} — {PROFILE.roleDetail} — {PROFILE.location}
-      </motion.p>
+        <div className="relative h-12 w-12 overflow-hidden rounded-full border border-line">
+          <img src={profileImage} alt={PROFILE.name} className="h-full w-full object-cover" />
+        </div>
+        <span className="inline-flex items-center gap-2 rounded-full border border-line px-3 py-1.5 font-mono text-xs text-muted">
+          <span className="relative flex h-2 w-2">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
+          </span>
+          Open to new work
+        </span>
+        <span className="hidden font-mono text-xs text-muted sm:inline">·</span>
+        <span className="hidden sm:inline">
+          <LiveClock />
+        </span>
+      </motion.div>
 
-      <motion.h1
-        custom={0.1}
+      <motion.p
+        custom={0.15}
         initial="hidden"
         animate="visible"
         variants={fadeUp}
-        className="mt-6 max-w-3xl font-display text-5xl font-medium leading-[1.05] text-paper sm:text-6xl lg:text-7xl"
+        className="mt-8 font-mono text-sm text-signal"
+      >
+        {PROFILE.role} — {PROFILE.roleDetail}  {/* — {PROFILE.location} */}
+      </motion.p>
+
+      <motion.h1
+        custom={0.25}
+        initial="hidden"
+        animate="visible"
+        variants={fadeUp}
+        className="mt-4 max-w-3xl font-display text-5xl font-medium leading-[1.05] text-paper sm:text-6xl lg:text-7xl"
       >
         {PROFILE.name}
       </motion.h1>
 
       <motion.p
-        custom={0.25}
+        custom={0.4}
         initial="hidden"
         animate="visible"
         variants={fadeUp}
@@ -43,7 +70,7 @@ const Hero = () => {
       </motion.p>
 
       <motion.div
-        custom={0.4}
+        custom={0.55}
         initial="hidden"
         animate="visible"
         variants={fadeUp}

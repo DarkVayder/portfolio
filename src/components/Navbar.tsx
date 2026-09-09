@@ -3,6 +3,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
 import { PROFILE } from "../data/profile";
+import ThemeToggle from "./ThemeToggle";
 
 const NAV_LINKS = [
   { label: "Work", href: "#work" },
@@ -14,6 +15,7 @@ const NAV_LINKS = [
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeHref, setActiveHref] = useState("");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -28,6 +30,26 @@ const Navbar = () => {
     };
   }, [menuOpen]);
 
+  useEffect(() => {
+    const sections = NAV_LINKS.map((link) => document.querySelector(link.href)).filter(
+      (el): el is Element => el !== null,
+    );
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveHref(`#${entry.target.id}`);
+          }
+        });
+      },
+      { rootMargin: "-45% 0px -50% 0px", threshold: 0 },
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <header
       className={`fixed top-0 left-0 z-50 w-full transition-colors duration-300 ${
@@ -39,44 +61,52 @@ const Navbar = () => {
           Rabiu<span className="text-signal">.</span>
         </a>
 
-        <ul className="hidden items-center gap-8 font-mono text-sm text-muted md:flex">
+        <ul className="hidden items-center gap-8 font-mono text-sm md:flex">
           {NAV_LINKS.map((link) => (
             <li key={link.href}>
-              <a href={link.href} className="transition-colors hover:text-paper">
+              <a
+                href={link.href}
+                className={`transition-colors hover:text-paper ${
+                  activeHref === link.href ? "text-paper" : "text-muted"
+                }`}
+              >
                 {link.label}
               </a>
             </li>
           ))}
         </ul>
 
-        <div className="flex items-center gap-5 text-lg text-muted">
-          <a
-            href={PROFILE.social.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-            className="hidden transition-colors hover:text-paper sm:inline-block"
-          >
-            <FaLinkedin />
-          </a>
-          <a
-            href={PROFILE.social.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub"
-            className="hidden transition-colors hover:text-paper sm:inline-block"
-          >
-            <FaGithub />
-          </a>
-          <a
-            href={PROFILE.social.x}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="X"
-            className="hidden transition-colors hover:text-paper sm:inline-block"
-          >
-            <FaXTwitter />
-          </a>
+        <div className="flex items-center gap-4 text-lg text-muted">
+          <div className="hidden items-center gap-4 sm:flex">
+            <a
+              href={PROFILE.social.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="transition-colors hover:text-paper"
+            >
+              <FaLinkedin />
+            </a>
+            <a
+              href={PROFILE.social.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              className="transition-colors hover:text-paper"
+            >
+              <FaGithub />
+            </a>
+            <a
+              href={PROFILE.social.x}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="X"
+              className="transition-colors hover:text-paper"
+            >
+              <FaXTwitter />
+            </a>
+          </div>
+          <ThemeToggle />
           <button
             type="button"
             aria-label={menuOpen ? "Close menu" : "Open menu"}

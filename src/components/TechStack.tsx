@@ -6,7 +6,7 @@ import SectionHeading from "./SectionHeading";
 const TechStack = () => {
   return (
     <section className="border-b border-line py-24">
-      <SectionHeading eyebrow="Stack" title="Tools I reach for" />
+      <SectionHeading index="03" eyebrow="Stack" title="Tools I reach for" />
 
       <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-5">
         {TECH_GROUPS.map((group, index) => (

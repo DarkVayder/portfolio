@@ -6,7 +6,7 @@ import SectionHeading from "./SectionHeading";
 const Experience = () => {
   return (
     <section id="experience" className="border-b border-line py-24">
-      <SectionHeading eyebrow="Experience" title="Where I've shipped" />
+      <SectionHeading index="02" eyebrow="Experience" title="Where I've shipped" />
 
       <div className="flex flex-col">
         {EXPERIENCES.map((experience, index) => (

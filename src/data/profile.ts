@@ -15,6 +15,7 @@ export const PROFILE = {
     x: "https://x.com/Zeldrys_kun",
   },
   cv: {
-    driveFileId: "17eEGt8ronEsGsmgLSmiwIGH1S9kt3OMs",
+    path: "/Rabiu_Muhammad_CV.pdf",
+    filename: "Rabiu_Muhammad_CV.pdf",
   },
 };

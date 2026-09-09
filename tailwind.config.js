@@ -4,12 +4,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        ink: "#0a0a0b",
-        surface: "#131316",
-        line: "#232327",
-        paper: "#f3f2ee",
-        muted: "#8b8b93",
-        signal: "#ff6a3d",
+        ink: "rgb(var(--color-ink) / <alpha-value>)",
+        surface: "rgb(var(--color-surface) / <alpha-value>)",
+        line: "rgb(var(--color-line) / <alpha-value>)",
+        paper: "rgb(var(--color-paper) / <alpha-value>)",
+        muted: "rgb(var(--color-muted) / <alpha-value>)",
+        signal: "rgb(var(--color-signal) / <alpha-value>)",
       },
       fontFamily: {
         display: ["'Space Grotesk'", "system-ui", "sans-serif"],
@@ -18,6 +18,15 @@ export default {
       },
       maxWidth: {
         content: "72rem",
+      },
+      keyframes: {
+        marquee: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+      },
+      animation: {
+        marquee: "marquee 32s linear infinite",
       },
     },
   },

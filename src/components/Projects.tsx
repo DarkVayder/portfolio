@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { FiArrowUpRight } from "react-icons/fi";
 import { PROJECTS } from "../data/projects";
 import { fadeUp } from "../lib/motion";
 import ProjectCover from "./ProjectCover";
@@ -7,7 +8,7 @@ import SectionHeading from "./SectionHeading";
 const Projects = () => {
   return (
     <section id="work" className="border-b border-line py-24">
-      <SectionHeading eyebrow="Selected work" title="Products people actually use" />
+      <SectionHeading index="01" eyebrow="Selected work" title="Products people actually use" />
 
       <div className="flex flex-col gap-6">
         {PROJECTS.map((project, index) => (
@@ -21,11 +22,14 @@ const Projects = () => {
             className="group grid grid-cols-1 gap-8 rounded-2xl border border-line bg-surface/40 p-6 transition-colors hover:border-muted/60 lg:grid-cols-5 lg:p-8"
           >
             <div className="overflow-hidden rounded-xl border border-line lg:col-span-2">
-              <ProjectCover title={project.title} accent={project.accent} />
+              <div className="transition-transform duration-500 group-hover:scale-105">
+                <ProjectCover title={project.title} accent={project.accent} />
+              </div>
             </div>
 
             <div className="flex flex-col justify-center lg:col-span-3">
               <div className="flex flex-wrap items-center gap-3 font-mono text-xs text-muted">
+                <span className="text-muted/60">{String(index + 1).padStart(2, "0")}</span>
                 <span style={{ color: project.accent }}>{project.category}</span>
                 <span>·</span>
                 <span>{project.role}</span>
@@ -48,16 +52,17 @@ const Projects = () => {
                 ))}
               </div>
 
-              <div className="mt-6 flex flex-wrap gap-5">
+              <div className="mt-6 flex flex-wrap gap-3">
                 {project.links.map((link) => (
                   <a
                     key={link.url}
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-mono text-sm text-paper underline decoration-line underline-offset-4 transition-colors hover:decoration-signal"
+                    className="inline-flex items-center gap-1.5 rounded-full border border-line px-4 py-2 font-mono text-sm text-paper transition-colors hover:border-signal hover:text-signal"
                   >
-                    {link.label} ↗
+                    {link.label}
+                    <FiArrowUpRight className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </a>
                 ))}
               </div>

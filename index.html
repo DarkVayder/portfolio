@@ -9,6 +9,13 @@
       content="Rabiu Muhammad — Senior Frontend / Software Engineer building production web platforms in fintech, real estate, and SaaS."
     />
     <title>Rabiu Muhammad — Software Engineer</title>
+    <script>
+      (function () {
+        var stored = localStorage.getItem("theme");
+        var theme = stored || (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
