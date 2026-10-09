@@ -1,19 +1,32 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Rabiu Muhammad — Senior Frontend / Software Engineer building production web platforms in fintech, real estate, and SaaS."
-    />
     <title>Rabiu Muhammad — Software Engineer</title>
+    <meta name="description" content="Rabiu Muhammad is a full-stack software engineer building production web platforms in fintech, real estate and SaaS." />
+    <meta name="author" content="Rabiu Muhammad" />
+    <meta name="theme-color" content="#0a0a0b" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Rabiu Muhammad" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <!--head-->
     <script>
       (function () {
-        var stored = localStorage.getItem("theme");
-        var theme = stored || (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
-        document.documentElement.setAttribute("data-theme", theme);
+        var root = document.documentElement;
+        var theme;
+        try {
+          theme = localStorage.getItem("theme");
+        } catch (e) {}
+        if (theme !== "light" && theme !== "dark") {
+          theme = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+        }
+        root.setAttribute("data-theme", theme);
+        root.classList.add("js");
       })();
     </script>
   </head>

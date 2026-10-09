@@ -1,7 +1,7 @@
 export const TECH_GROUPS: { label: string; items: string[] }[] = [
-  { label: "Languages", items: ["JavaScript", "TypeScript"] },
+  { label: "Languages", items: ["TypeScript", "JavaScript"] },
   { label: "Frontend", items: ["React", "Next.js", "React Native", "Tailwind CSS", "Redux"] },
-  { label: "Backend", items: ["Node.js", "Express", "NestJS"] },
-  { label: "Data & Infra", items: ["MongoDB", "Firebase", "REST APIs"] },
-  { label: "Tooling", items: ["Git", "Vite", "Figma"] },
+  { label: "Backend", items: ["Node.js", "NestJS", "Express", "REST APIs"] },
+  { label: "Data", items: ["PostgreSQL", "MongoDB", "Firebase"] },
+  { label: "Tooling", items: ["Git", "Vite", "Docker", "Figma"] },
 ];

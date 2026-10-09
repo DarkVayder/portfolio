@@ -1,58 +1,66 @@
 export type Experience = {
-  year: string;
+  period: string;
   role: string;
-  description: string;
+  company: string;
+  /** Roles with highlights render in full; the rest render as a compact row. */
+  highlights?: string[];
   technologies: string[];
 };
 
 export const EXPERIENCES: Experience[] = [
   {
-    year: "2023 — Present",
+    period: "2026",
+    role: "Software Engineer",
+    company: "Finclusion",
+    highlights: [
+      "Full-stack work on fintech and real-estate products: escrow and payment flows, multi-role dashboards, KYC, and internal admin tooling.",
+      "Built on React, Next.js and NestJS behind the company's central single sign-on.",
+    ],
+    technologies: ["TypeScript", "React", "Next.js", "NestJS", "Node.js"],
+  },
+  {
+    period: "2023 — Present",
     role: "Freelance Software Engineer",
-    description:
-      "Delivered production platforms end to end for clients across fintech, e-commerce, and real estate — including SabiTrack (B2B project & escrow dashboard), Nicely Polished (full-stack e-commerce storefront), and Spayce (full-stack real estate marketplace, React + NestJS). Translated Figma designs into pixel-accurate UI and integrated REST APIs across every build.",
+    company: "Self-employed",
+    highlights: [
+      "Delivered production platforms end to end for clients in fintech, e-commerce and real estate, including SabiTrack, Nicely Polished and Spayce.",
+      "Translated Figma designs into accurate, responsive UI and integrated REST APIs on every build.",
+    ],
     technologies: ["React", "Next.js", "NestJS", "Node.js", "TypeScript", "Tailwind CSS", "Firebase", "MongoDB"],
   },
   {
-    year: "2026",
-    role: "Software Engineer — Finclusion",
-    description:
-      "Built and maintained web applications ranging from landing pages to feature upgrades on existing production systems.",
-    technologies: ["TypeScript", "Next.js", "React.js", "Node.js", "Nestjs"],
+    period: "2025",
+    role: "Software Engineer",
+    company: "SparkStrand",
+    highlights: [
+      "Shipped two production products: TaxDone, a tax-filing platform in three languages, and VentureDirection, a multi-tenant business platform.",
+      "Built a shared component layer used across web, React Native and desktop.",
+      "Partnered directly with design and backend to ship features end to end.",
+    ],
+    technologies: ["Next.js", "React", "React Native", "NestJS", "Tailwind CSS", "Medusa", "Docker", "PostgreSQL"],
   },
   {
-    year: "2026",
-    role: "Frontend Developer — Mindgrid Technologies",
-    description:
-      "Built and maintained web applications ranging from landing pages to feature upgrades on existing production systems.",
-    technologies: ["TypeScript", "Next.js", "React.js", "Node.js"],
-  },
-    {
-    year: "2025",
-    role: "Software Developer — Camie",
-    description:
-      "Built and maintained web applications ranging from landing pages to feature upgrades on existing production systems.",
-    technologies: ["JavaScript", "Next.js", "React.js", "Node.js", "TypeScript"],
+    period: "2026",
+    role: "Frontend Developer",
+    company: "Mindgrid Technologies",
+    technologies: ["TypeScript", "Next.js", "React"],
   },
   {
-    year: "2025",
-    role: "Software Engineer — SparkStrand",
-    description:
-      "Shipped two production products: TaxDone, a multi-language (EN/DE/FR) tax-filing platform, and VentureDirection, a multi-tenant business platform with shared UI components across web, React Native, and desktop. Partnered directly with design and backend to ship features end to end.",
-    technologies: ["Next.js", "React", "React Native", "Nestjs", "Tailwind CSS", "Medusa", "Docker", "Postgress"],
+    period: "2025",
+    role: "Software Developer",
+    company: "Camie",
+    technologies: ["TypeScript", "Next.js", "React", "Node.js"],
   },
   {
-    year: "2025",
-    role: "Web Developer — Isaac Consolidates",
-    description:
-      "Built and maintained web applications ranging from landing pages to feature upgrades on existing production systems.",
-    technologies: ["JavaScript", "Next.js", "React.js", "Node.js", "Python"],
+    period: "2025",
+    role: "Web Developer",
+    company: "Isaac Consolidates",
+    technologies: ["JavaScript", "Next.js", "React", "Python"],
   },
   {
-    year: "2024",
-    role: "Frontend Developer — HNG (Internship)",
-    description:
-      "Built a landing web application from Figma designs as part of a fast-paced cohort-based internship program.",
-    technologies: ["React.js", "JavaScript", "Figma"],
+    period: "2024",
+    role: "Frontend Developer (Internship)",
+    company: "HNG",
+    technologies: ["React", "JavaScript", "Figma"],
   },
 ];

@@ -12,21 +12,12 @@ export default {
         signal: "rgb(var(--color-signal) / <alpha-value>)",
       },
       fontFamily: {
-        display: ["'Space Grotesk'", "system-ui", "sans-serif"],
-        sans: ["'Inter'", "system-ui", "sans-serif"],
-        mono: ["'JetBrains Mono'", "ui-monospace", "monospace"],
+        display: ["'Space Grotesk Variable'", "system-ui", "sans-serif"],
+        sans: ["'Inter Variable'", "system-ui", "sans-serif"],
+        mono: ["'JetBrains Mono Variable'", "ui-monospace", "monospace"],
       },
       maxWidth: {
         content: "72rem",
-      },
-      keyframes: {
-        marquee: {
-          "0%": { transform: "translateX(0)" },
-          "100%": { transform: "translateX(-50%)" },
-        },
-      },
-      animation: {
-        marquee: "marquee 32s linear infinite",
       },
     },
   },

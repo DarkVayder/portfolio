@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Rabiu Muhammad — Software Engineer</title>
+    <meta name="author" content="Rabiu Muhammad" />
+    <style>
+      @page {
+        size: A4;
+        margin: 12mm 15mm;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 10pt;
+        line-height: 1.38;
+        color: #111;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      h1 {
+        margin: 0;
+        font-size: 21pt;
+        line-height: 1.1;
+      }
+      .title {
+        margin: 3pt 0 4pt;
+        font-size: 11pt;
+        color: #b44408;
+      }
+      .contact {
+        margin: 0;
+        font-size: 9.2pt;
+        color: #444;
+      }
+      h2 {
+        margin: 12pt 0 6pt;
+        padding-bottom: 2.5pt;
+        border-bottom: 0.75pt solid #999;
+        font-size: 9.5pt;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      p {
+        margin: 0;
+      }
+      .role {
+        display: flex;
+        justify-content: space-between;
+        gap: 12pt;
+        margin-top: 8pt;
+        font-weight: bold;
+      }
+      .role:first-of-type {
+        margin-top: 0;
+      }
+      .role span:last-child {
+        font-weight: normal;
+        color: #444;
+        white-space: nowrap;
+      }
+      ul {
+        margin: 3pt 0 0;
+        padding-left: 13pt;
+      }
+      li {
+        margin-bottom: 2pt;
+      }
+      .stack {
+        margin-top: 2pt;
+        font-size: 9pt;
+        color: #555;
+      }
+      .also {
+        display: flex;
+        justify-content: space-between;
+        gap: 12pt;
+        margin-top: 2.5pt;
+      }
+      .also span:last-child {
+        color: #444;
+        white-space: nowrap;
+      }
+      .skills {
+        display: grid;
+        grid-template-columns: 62pt 1fr;
+        row-gap: 2.5pt;
+      }
+      .skills dt {
+        font-weight: bold;
+      }
+      .skills dd {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Rabiu Muhammad</h1>
+    <p class="title">Software Engineer — Full-stack, frontend-leaning</p>
+    <p class="contact">
+      Abuja, Nigeria (UTC+1) · <a href="mailto:mrabiu321@gmail.com">mrabiu321@gmail.com</a> · +234 816 333 8274 ·
+      <a href="https://www.linkedin.com/in/rabiu-muhammad-b17a452b1/">linkedin.com/in/rabiu-muhammad-b17a452b1</a> ·
+      <a href="https://github.com/DarkVayder">github.com/DarkVayder</a>
+    </p>
+
+    <h2>Summary</h2>
+    <p>
+      Full-stack software engineer who has shipped five production platforms across three markets (Switzerland, the UK
+      and Nigeria): tax filing, escrow-backed payments, a real estate marketplace and e-commerce checkout. Works in
+      TypeScript, React and Next.js with Node.js and NestJS behind them, and owns features from the Figma file to the
+      production API.
+    </p>
+
+    <h2>Experience</h2>
+
+    <p class="role"><span>Software Engineer — Finclusion</span><span>2026</span></p>
+    <ul>
+      <li>
+        Build full-stack features across fintech and real-estate products: escrow and payment flows, multi-role
+        dashboards, KYC, and internal admin tooling.
+      </li>
+      <li>Deliver on React, Next.js and NestJS, integrated with the company's central single sign-on.</li>
+    </ul>
+
+    <p class="role"><span>Freelance Software Engineer — Self-employed</span><span>2023 – Present</span></p>
+    <ul>
+      <li>
+        <strong>Spayce</strong> (spayce.ai), real estate marketplace for sales, rentals, short-lets and hotel bookings:
+        built role-specific journeys for six user roles on a React + Vite client and NestJS API, with route guarding
+        so each role reaches only its own surface.
+      </li>
+      <li>
+        Implemented escrow-held payments for viewings, short stays and sales so funds release only when the agreed
+        step is confirmed; added KYC/KYB verification, listing verification badges and an upfront cost calculator.
+      </li>
+      <li>
+        Audited every Spayce user journey role by role and closed the gaps found (unguarded routes, missing
+        notifications, incomplete payment flows); built an activity and error monitor so client-side failures reach
+        the admin team before users report them.
+      </li>
+      <li>
+        <strong>SabiTrack</strong> (sabitrack.com), escrow-backed project management: built the B2B dashboard that
+        enterprises and vendors use for milestone tracking, approvals and audit history, as a pure client over the
+        platform's REST APIs.
+      </li>
+      <li>
+        <strong>Nicely Polished</strong> (nicelypolished.com), UK e-commerce: built the storefront end to end,
+        including catalogue, cart, checkout, multi-currency pricing and a loyalty points system.
+      </li>
+    </ul>
+
+    <p class="role"><span>Software Engineer — SparkStrand</span><span>2025</span></p>
+    <ul>
+      <li>
+        <strong>TaxDone</strong> (app.taxdone.ch), tax-filing platform: worked across the stack on the client app
+        (Next.js, React, Node.js, Express) and shipped it in English, German and French from a single codebase.
+      </li>
+      <li>Built the market-entry site for TaxDone's expansion from Switzerland into Nigeria.</li>
+      <li>
+        <strong>VentureDirection</strong> (venturedirection.com), multi-tenant business platform: built a shared
+        component layer that renders identically on web, React Native and desktop, plus the role-based views for
+        enterprise tenants.
+      </li>
+    </ul>
+
+    <h2>Additional experience</h2>
+    <p class="also"><span><strong>Frontend Developer</strong> — Mindgrid Technologies · TypeScript, Next.js, React</span><span>2026</span></p>
+    <p class="also"><span><strong>Software Developer</strong> — Camie · TypeScript, Next.js, React, Node.js</span><span>2025</span></p>
+    <p class="also"><span><strong>Web Developer</strong> — Isaac Consolidates · JavaScript, Next.js, React, Python</span><span>2025</span></p>
+    <p class="also"><span><strong>Frontend Developer (Internship)</strong> — HNG · React, JavaScript, Figma</span><span>2024</span></p>
+
+    <h2>Skills</h2>
+    <dl class="skills">
+      <dt>Languages</dt>
+      <dd>TypeScript, JavaScript</dd>
+      <dt>Frontend</dt>
+      <dd>React, Next.js, React Native, Tailwind CSS, Redux, accessibility, responsive design</dd>
+      <dt>Backend</dt>
+      <dd>Node.js, NestJS, Express, REST APIs, role-based access control</dd>
+      <dt>Data</dt>
+      <dd>PostgreSQL, MongoDB, Firebase</dd>
+      <dt>Tooling</dt>
+      <dd>Git, Vite, Docker, Figma</dd>
+    </dl>
+  </body>
+</html>
