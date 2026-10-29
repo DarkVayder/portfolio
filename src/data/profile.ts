@@ -10,7 +10,7 @@ export const PROFILE = {
   tagline:
     "Tax filing in Switzerland, escrow-backed property transactions in Nigeria, e-commerce checkout in the UK. I design and build features across the stack, from architecture to production, and stay with them after launch.",
   bio: [
-    "I'm a software engineer who ships things people actually use. Over the last few years that has meant the client app for a Swiss tax-filing platform, the operational dashboard for an escrow-backed project management tool, a real estate marketplace end to end, and the shared UI layer for a multi-tenant business platform spanning web, native and desktop.",
+    "I'm a software engineer who ships things people actually use. Since 2022 that has meant the client app for a Swiss tax-filing platform, the operational dashboard for an escrow-backed project management tool, a real estate marketplace end to end, and the shared UI layer for a multi-tenant business platform spanning web, native and desktop.",
     "I work across the whole stack: React and Next.js on the client, Node.js and NestJS on the server, and the architecture that connects them. That means data models, API contracts, authentication and role boundaries, and payment and escrow flows. I care more about whether the thing holds up under real users than whether the demo looks good.",
   ],
   email: "mrabiu321@gmail.com",

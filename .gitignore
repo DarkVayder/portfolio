@@ -20,3 +20,6 @@ yarn-error.log*
 # build output
 /dist-ssr
 *.tsbuildinfo
+
+# personal job applications, not published
+/cv/cover-letters/
