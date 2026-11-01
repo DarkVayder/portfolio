@@ -49,7 +49,7 @@ export const PROJECTS: Project[] = [
     stack: ["Next.js", "React", "Node.js", "Express", "i18n (EN/DE/FR)", "Tailwind CSS"],
     links: [
       { label: "app.taxdone.ch", url: "https://app.taxdone.ch" },
-      { label: "Nigeria site", url: "https://taxdone-site-sparkstrand-web-sparkstrand.vercel.app/en" },
+      { label: "Taxdone site", url: "https://www.taxdone.ch/en" },
     ],
   },
   {
