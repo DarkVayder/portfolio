@@ -27,10 +27,170 @@
         }
         root.setAttribute("data-theme", theme);
         root.classList.add("js");
+
+        // Intro screen: once per session, home page only, never for reduced motion.
+        var path = location.pathname.replace(/\/+$/, "");
+        var home = path === "" || path === "/index.html";
+        var seen = false;
+        try {
+          seen = !!sessionStorage.getItem("intro");
+        } catch (e) {}
+        var calm = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (home && !seen && !calm) root.classList.add("ld-active");
       })();
     </script>
+    <style>
+      /* Intro screen. Inline so it paints before any bundle loads; shown only when
+         the script above has decided to play it. */
+      #ld { display: none; }
+      html.ld-active, html.ld-active body { overflow: hidden; }
+      html.ld-active #ld {
+        position: fixed; inset: 0; z-index: 9999; display: flex; align-items: center; justify-content: center;
+        color: #f3f2ee; font-family: ui-monospace, "JetBrains Mono", Menlo, Consolas, monospace;
+        perspective: 900px; pointer-events: all;
+      }
+      html.ld-done #ld { pointer-events: none; }
+      .ld-half { position: absolute; left: 0; right: 0; height: 50.5%; background: #0a0a0b; z-index: 0;
+        transition: transform 0.95s cubic-bezier(0.76, 0, 0.24, 1) 0.45s; }
+      .ld-half.t { top: 0; transform-origin: 50% 0; }
+      .ld-half.b { bottom: 0; transform-origin: 50% 100%; }
+      html.ld-done .ld-half.t { transform: translateY(-101%) rotateX(22deg); }
+      html.ld-done .ld-half.b { transform: translateY(101%) rotateX(-22deg); }
+      .ld-glow { position: absolute; width: 60vmin; height: 60vmin; border-radius: 50%; z-index: 1;
+        background: radial-gradient(circle, rgb(255 106 61 / 0.28), transparent 65%); filter: blur(10px);
+        animation: ld-pulse 2.4s ease-in-out infinite; }
+      .ld-grid { position: absolute; inset: 0; z-index: 1; overflow: hidden; perspective: 520px;
+        -webkit-mask-image: radial-gradient(ellipse 70% 55% at 50% 62%, #000 15%, transparent 72%);
+        mask-image: radial-gradient(ellipse 70% 55% at 50% 62%, #000 15%, transparent 72%); }
+      .ld-grid::before { content: ""; position: absolute; left: -50%; right: -50%; top: 46%; height: 140%;
+        background-image: linear-gradient(rgb(255 106 61 / 0.35) 1px, transparent 1px),
+          linear-gradient(90deg, rgb(255 106 61 / 0.35) 1px, transparent 1px);
+        background-size: 64px 64px; transform: rotateX(72deg); transform-origin: 50% 0;
+        animation: ld-grid 1.6s linear infinite; }
+      .ld-stage { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 2.2rem;
+        transition: opacity 0.4s ease, transform 0.6s ease, filter 0.6s ease; }
+      html.ld-done .ld-stage, html.ld-done .ld-grid, html.ld-done .ld-glow { opacity: 0; filter: blur(6px);
+        transition: opacity 0.45s ease, filter 0.45s ease; }
+      html.ld-done .ld-stage { transform: scale(1.18); }
+      .ld-cube { position: relative; width: 84px; height: 84px; transform-style: preserve-3d;
+        animation: ld-spin 5.5s linear infinite; }
+      .ld-cube i { position: absolute; inset: 0; border: 1.5px solid rgb(255 106 61 / 0.95);
+        background: rgb(255 106 61 / 0.07); box-shadow: inset 0 0 22px rgb(255 106 61 / 0.35), 0 0 18px rgb(255 106 61 / 0.25); }
+      .ld-cube i:nth-child(1) { transform: translateZ(42px); }
+      .ld-cube i:nth-child(2) { transform: rotateY(180deg) translateZ(42px); }
+      .ld-cube i:nth-child(3) { transform: rotateY(90deg) translateZ(42px); }
+      .ld-cube i:nth-child(4) { transform: rotateY(-90deg) translateZ(42px); }
+      .ld-cube i:nth-child(5) { transform: rotateX(90deg) translateZ(42px); }
+      .ld-cube i:nth-child(6) { transform: rotateX(-90deg) translateZ(42px); }
+      .ld-cube b { position: absolute; left: 50%; top: 50%; width: 38px; height: 38px; margin: -19px 0 0 -19px;
+        transform-style: preserve-3d; animation: ld-spin-rev 3.2s linear infinite; }
+      .ld-cube b i { border-color: rgb(243 242 238 / 0.9); background: rgb(243 242 238 / 0.08);
+        box-shadow: 0 0 14px rgb(243 242 238 / 0.25); }
+      .ld-cube b i:nth-child(1) { transform: translateZ(19px); }
+      .ld-cube b i:nth-child(2) { transform: rotateY(180deg) translateZ(19px); }
+      .ld-cube b i:nth-child(3) { transform: rotateY(90deg) translateZ(19px); }
+      .ld-cube b i:nth-child(4) { transform: rotateY(-90deg) translateZ(19px); }
+      .ld-cube b i:nth-child(5) { transform: rotateX(90deg) translateZ(19px); }
+      .ld-cube b i:nth-child(6) { transform: rotateX(-90deg) translateZ(19px); }
+      .ld-name { margin: 0; display: flex; gap: 0.06em; font-size: clamp(1.4rem, 4.4vw, 2.4rem); font-weight: 600;
+        letter-spacing: 0.22em; text-transform: uppercase; }
+      .ld-name span { display: inline-block; opacity: 0; transform: translateY(70%) rotateX(-80deg);
+        animation: ld-letter 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
+      .ld-role { margin: -1.2rem 0 0; font-size: 0.72rem; letter-spacing: 0.32em; text-transform: uppercase;
+        color: rgb(243 242 238 / 0.55); opacity: 0; animation: ld-fade 0.8s ease 1s forwards; }
+      .ld-meter { display: flex; align-items: center; gap: 1rem; width: min(78vw, 22rem); }
+      .ld-track { position: relative; flex: 1; height: 2px; background: rgb(243 242 238 / 0.14); overflow: hidden; }
+      .ld-track span { position: absolute; inset: 0; transform-origin: 0 50%; transform: scaleX(0);
+        background: linear-gradient(90deg, #ff6a3d, #f3f2ee); box-shadow: 0 0 12px #ff6a3d; }
+      .ld-num { min-width: 3.2ch; text-align: right; font-size: 0.85rem; color: #ff6a3d; font-variant-numeric: tabular-nums; }
+      @keyframes ld-spin { from { transform: rotateX(-24deg) rotateY(0deg); } to { transform: rotateX(-24deg) rotateY(360deg); } }
+      @keyframes ld-spin-rev { from { transform: rotateX(30deg) rotateY(360deg); } to { transform: rotateX(30deg) rotateY(0deg); } }
+      @keyframes ld-grid { from { background-position: 0 0; } to { background-position: 0 64px; } }
+      @keyframes ld-pulse { 0%, 100% { opacity: 0.65; transform: scale(0.94); } 50% { opacity: 1; transform: scale(1.06); } }
+      @keyframes ld-letter { to { opacity: 1; transform: none; } }
+      @keyframes ld-fade { to { opacity: 1; } }
+    </style>
   </head>
   <body>
+    <div id="ld" aria-hidden="true">
+      <div class="ld-half t"></div>
+      <div class="ld-half b"></div>
+      <div class="ld-glow"></div>
+      <div class="ld-grid"></div>
+      <div class="ld-stage">
+        <div class="ld-cube">
+          <i></i><i></i><i></i><i></i><i></i><i></i>
+          <b><i></i><i></i><i></i><i></i><i></i><i></i></b>
+        </div>
+        <p class="ld-name" id="ld-name"></p>
+        <p class="ld-role">Software Engineer</p>
+        <div class="ld-meter">
+          <div class="ld-track"><span id="ld-bar"></span></div>
+          <span class="ld-num" id="ld-num">0</span>
+        </div>
+      </div>
+    </div>
+    <script>
+      (function () {
+        var root = document.documentElement;
+        var node = document.getElementById("ld");
+        if (!node) return;
+        if (!root.classList.contains("ld-active")) {
+          node.parentNode.removeChild(node);
+          return;
+        }
+        try {
+          sessionStorage.setItem("intro", "1");
+        } catch (e) {}
+
+        // Letters of the name, staggered in.
+        var name = document.getElementById("ld-name");
+        "Rabiu Muhammad".split("").forEach(function (ch, i) {
+          var span = document.createElement("span");
+          span.textContent = ch === " " ? "\u00a0" : ch;
+          span.style.animationDelay = 0.15 + i * 0.045 + "s";
+          name.appendChild(span);
+        });
+
+        var num = document.getElementById("ld-num");
+        var bar = document.getElementById("ld-bar");
+        var MIN = 2400;
+        var start = performance.now();
+        var loaded = document.readyState === "complete";
+        var finished = false;
+        window.addEventListener("load", function () {
+          loaded = true;
+        });
+
+        function finish() {
+          if (finished) return;
+          finished = true;
+          num.textContent = "100";
+          bar.style.transform = "scaleX(1)";
+          root.classList.add("ld-done");
+          setTimeout(function () {
+            root.classList.remove("ld-active");
+            if (node.parentNode) node.parentNode.removeChild(node);
+          }, 1700);
+        }
+
+        function frame(now) {
+          if (finished) return;
+          var t = Math.min((now - start) / MIN, 1);
+          var eased = 1 - Math.pow(1 - t, 3);
+          // Hold at 92% until the page has really finished loading.
+          var value = loaded ? eased : Math.min(eased, 0.92);
+          num.textContent = String(Math.round(value * 100));
+          bar.style.transform = "scaleX(" + value + ")";
+          if (t >= 1 && loaded) finish();
+          else requestAnimationFrame(frame);
+        }
+        requestAnimationFrame(frame);
+
+        // Never trap a visitor behind the intro.
+        setTimeout(finish, 7000);
+      })();
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

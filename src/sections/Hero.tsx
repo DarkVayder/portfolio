@@ -1,13 +1,25 @@
+import type { CSSProperties } from "react";
+import HeroScene from "../components/HeroScene";
+import CountUp from "../components/CountUp";
 import Icon from "../components/Icon";
 import Portrait from "../components/Portrait";
+import TiltCard from "../components/TiltCard";
 import { FACTS, PROFILE } from "../data/profile";
 import { portraitSrc } from "../lib/portrait";
 
+/** Staggers the entrance once the loading screen lifts. */
+const enter = (delay: number): CSSProperties => ({ "--d": `${delay}s` }) as CSSProperties;
+
 const Hero = () => (
-  <section id="top" aria-labelledby="hero-title" className="pb-16 pt-32 lg:pt-40">
+  <section id="top" aria-labelledby="hero-title" className="relative pb-16 pt-32 lg:pt-40">
+    <HeroScene />
+
     <div className={portraitSrc ? "grid items-center gap-10 lg:grid-cols-[1fr_auto] lg:gap-16" : ""}>
       <div>
-        <p className="flex flex-wrap items-center gap-x-3 gap-y-2 font-mono text-sm text-muted">
+        <p
+          style={enter(0.05)}
+          className="hero-in flex flex-wrap items-center gap-x-3 gap-y-2 font-mono text-sm text-muted"
+        >
           <span className="text-paper">{PROFILE.name}</span>
           <span aria-hidden="true">·</span>
           <span>
@@ -17,14 +29,17 @@ const Hero = () => (
 
         <h1
           id="hero-title"
-          className="mt-6 max-w-3xl text-balance font-display text-4xl font-medium leading-[1.08] text-paper sm:text-5xl lg:text-6xl"
+          style={enter(0.18)}
+          className="hero-in mt-6 max-w-3xl text-balance font-display text-4xl font-medium leading-[1.08] text-paper sm:text-5xl lg:text-6xl"
         >
           {PROFILE.headline}
         </h1>
 
-        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">{PROFILE.tagline}</p>
+        <p style={enter(0.32)} className="hero-in mt-6 max-w-2xl text-lg leading-relaxed text-muted">
+          {PROFILE.tagline}
+        </p>
 
-        <div className="mt-9 flex flex-wrap items-center gap-3">
+        <div style={enter(0.46)} className="hero-in mt-9 flex flex-wrap items-center gap-3">
           <a href="#work" className="btn-primary">
             See the work
           </a>
@@ -38,21 +53,32 @@ const Hero = () => (
           </a>
         </div>
 
-        <p className="mt-8 inline-flex items-center gap-2 font-mono text-xs text-muted">
-          <span className="h-2 w-2 rounded-full bg-emerald-500" aria-hidden="true" />
+        <p style={enter(0.6)} className="hero-in mt-8 inline-flex items-center gap-2 font-mono text-xs text-muted">
+          <span className="relative flex h-2 w-2" aria-hidden="true">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-60" />
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
+          </span>
           {PROFILE.availability} · {PROFILE.location} ({PROFILE.utcOffset})
         </p>
       </div>
 
-      <Portrait className="order-first w-28 sm:w-36 lg:order-none lg:w-64" />
+      <div style={enter(0.3)} className="hero-in order-first flex justify-center lg:order-none lg:block">
+        <Portrait className="w-44 sm:w-56 lg:w-[21rem]" />
+      </div>
     </div>
 
-    <dl className="mt-16 grid grid-cols-2 gap-x-8 gap-y-8 border-t border-line pt-10 lg:grid-cols-4">
-      {FACTS.map((fact) => (
-        <div key={fact.label} className="flex flex-col-reverse gap-2">
+    <dl className="mt-16 grid grid-cols-2 gap-4 lg:grid-cols-4">
+      {FACTS.map((fact, index) => (
+        <TiltCard
+          key={fact.label}
+          style={enter(0.7 + index * 0.08)}
+          className="hero-in flex flex-col-reverse gap-2 rounded-2xl border border-line bg-surface/70 p-5 backdrop-blur-sm sm:p-6"
+        >
           <dt className="text-sm leading-snug text-muted">{fact.label}</dt>
-          <dd className="font-display text-4xl font-medium text-paper sm:text-5xl">{fact.value}</dd>
-        </div>
+          <dd className="font-display text-4xl font-medium text-paper sm:text-5xl">
+            <CountUp value={fact.value} />
+          </dd>
+        </TiltCard>
       ))}
     </dl>
   </section>

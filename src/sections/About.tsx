@@ -1,21 +1,27 @@
+import FloatShape from "../components/FloatShape";
 import Section from "../components/Section";
+import TechGlobe from "../components/TechGlobe";
 import { PROFILE } from "../data/profile";
 import { TECH_GROUPS } from "../data/techstack";
 
 const About = () => (
-  <Section id="about" eyebrow="About" title="What I actually do">
-    <div className="grid gap-12 lg:grid-cols-12">
-      <div data-reveal className="flex flex-col gap-5 lg:col-span-7">
+  <Section
+    id="about"
+    index="04"
+    eyebrow="About"
+    title="What I actually do"
+    decor={<FloatShape kind="cube" size={70} depth={0.12} duration={18} className="right-[9%] top-20 hidden lg:block" />}
+  >
+    <div className="grid gap-14 lg:grid-cols-12">
+      <div data-reveal="left" className="flex flex-col gap-5 lg:col-span-6">
         {PROFILE.bio.map((paragraph) => (
           <p key={paragraph} className="text-lg leading-relaxed text-muted">
             {paragraph}
           </p>
         ))}
-      </div>
 
-      <div data-reveal className="lg:col-span-5">
-        <h3 className="font-mono text-xs uppercase tracking-[0.14em] text-muted">Tools I reach for</h3>
-        <dl className="mt-5 flex flex-col">
+        <h3 className="mt-6 font-mono text-xs uppercase tracking-[0.14em] text-muted">Tools I reach for</h3>
+        <dl className="flex flex-col">
           {TECH_GROUPS.map((group) => (
             <div
               key={group.label}
@@ -26,6 +32,10 @@ const About = () => (
             </div>
           ))}
         </dl>
+      </div>
+
+      <div data-reveal="scale" className="flex items-center justify-center lg:col-span-6">
+        <TechGlobe />
       </div>
     </div>
   </Section>

@@ -1,6 +1,9 @@
 import { useEffect } from "react";
 
-/** Fades in every [data-reveal] element the first time it scrolls into view. */
+/**
+ * Reveals every [data-reveal] element the first time it scrolls into view. The attribute
+ * value picks the entrance (see index.css); --i on the element staggers siblings.
+ */
 export const useRevealOnScroll = () => {
   useEffect(() => {
     const targets = document.querySelectorAll<HTMLElement>("[data-reveal]");

@@ -1,3 +1,4 @@
+import Marquee from "../components/Marquee";
 import About from "../sections/About";
 import Approach from "../sections/Approach";
 import Contact from "../sections/Contact";
@@ -8,6 +9,7 @@ import Work from "../sections/Work";
 const Home = () => (
   <>
     <Hero />
+    <Marquee />
     <Work />
     <Experience />
     <Approach />

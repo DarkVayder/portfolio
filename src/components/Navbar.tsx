@@ -79,7 +79,7 @@ const Navbar = () => {
               <a
                 href={`/#${link.id}`}
                 aria-current={activeId === link.id ? "true" : undefined}
-                className={`py-2 transition-colors hover:text-paper ${
+                className={`nav-link py-2 transition-colors hover:text-paper ${
                   activeId === link.id ? "text-paper" : "text-muted"
                 }`}
               >

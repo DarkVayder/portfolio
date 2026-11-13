@@ -1,7 +1,11 @@
 import { useEffect } from "react";
+import Backdrop from "./components/Backdrop";
+import CursorGlow from "./components/CursorGlow";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
+import ScrollProgress from "./components/ScrollProgress";
 import { useRevealOnScroll } from "./lib/reveal";
+import { useScrollVars } from "./lib/scroll";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import Privacy from "./pages/Privacy";
@@ -18,6 +22,7 @@ function App({ pathname }: { pathname: string }) {
   const Page = PAGES[route.id];
 
   useRevealOnScroll();
+  useScrollVars();
 
   useEffect(() => {
     document.title = route.title;
@@ -31,14 +36,14 @@ function App({ pathname }: { pathname: string }) {
       >
         Skip to content
       </a>
-      <div aria-hidden="true" className="ambient-glow pointer-events-none absolute inset-x-0 top-0 -z-10 h-screen" />
+      <Backdrop />
+      <CursorGlow />
+      <ScrollProgress />
       <Navbar />
       <main id="main" className="mx-auto max-w-content px-6 lg:px-10">
         <Page />
       </main>
-      <div className="mx-auto max-w-content px-6 lg:px-10">
-        <Footer />
-      </div>
+      <Footer />
     </div>
   );
 }
